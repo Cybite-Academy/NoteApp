@@ -7,15 +7,19 @@ import Search from './components/Search'
 import Tags from './components/Tags'
 
 function App() {
-  const [isOpenCreateNote, setIsOpenCreateNote]=useState(false);
+  const [isOpenCreateNote, setIsOpenCreateNote] = useState(false);
+
+  const noteObj = [];
+  const [noteDetails, setNoteDetails] = useState(noteObj);
+  console.log(noteDetails)
   return (
     <main className='w-[90%] mx-auto flex flex-col gap-8 pt-16'>
-      <Header openCreate = {setIsOpenCreateNote}/>
-      <Search/>
-      <Tags/>
-      {isOpenCreateNote && <CreateNote openCreate = {setIsOpenCreateNote}/>}
-    
-      <Notes/>
+      <Header openCreate={setIsOpenCreateNote} />
+      <Search />
+      <Tags />
+      {isOpenCreateNote && <CreateNote openCreate={setIsOpenCreateNote} setNoteDetails={setNoteDetails} noteDetails={noteDetails}/>}     
+
+      <Notes noteDetails={noteDetails}/>
     </main>
   )
 }
