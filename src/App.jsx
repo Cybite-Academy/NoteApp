@@ -1,4 +1,5 @@
 import './App.css'
+import CreateNote from './components/CreateNote'
 import Header from './components/Header'
 import Notes from './components/Notes'
 import Search from './components/Search'
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Search/>
       <Tags/>
+      <CreateNote/>
       <Notes/>
     </main>
   )

@@ -1,7 +1,7 @@
 import { TbTags } from "react-icons/tb";
-
+import {tags} from '../Utils/tags'
 const Tags = () => {
-    const tags = ['all tags', 'work', 'personal', 'ideas', 'todo', 'important', 'archive'];
+  
     return (
         <div className="dropdown dropdown-start ">
             <section tabIndex={0} role="button" className="btn m-1">

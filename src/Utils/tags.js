@@ -1,0 +1,1 @@
+ export const tags = ['all tags', 'work', 'personal', 'ideas', 'todo', 'important', 'archive'];
