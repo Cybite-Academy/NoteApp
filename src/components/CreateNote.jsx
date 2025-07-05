@@ -1,6 +1,6 @@
 import { tags } from "../Utils/tags"
 
-const CreateNote = () => {
+const CreateNote = ({openCreate}) => {
     function filter(tags) {
         const filteredTags = tags.filter((tag) => { return tag !== 'all tags' })
 
@@ -10,6 +10,9 @@ const CreateNote = () => {
 
     }
 
+    function cancelNewNote() {
+        openCreate(false)
+    }
     return (
         <section className="flex flex-col gap-6 border border-gray-300 p-6 rounded-lg">
             <h2 className="text-2xl font-semibold">Create New Note</h2>
@@ -22,7 +25,7 @@ const CreateNote = () => {
             </section>
 
             <section className="flex gap-4 w-full justify-end">
-                <button className="btn btn-ghost rounded-lg">Cancel</button>
+                <button className="btn btn-ghost rounded-lg" onClick={cancelNewNote}>Cancel</button>
                 <button className="btn btn-neutral rounded-lg">Create</button>
             </section>
         </section>
