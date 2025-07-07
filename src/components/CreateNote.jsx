@@ -8,13 +8,16 @@ const CreateNote = ({ openCreate, noteDetails, setNoteDetails }) => {
     const [note, setNote] = useState("");
     const [noteTag, setNoteTag] = useState([]);
 
-    console.log(noteTag);
     function cancelNewNote() {
         openCreate(false);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!title || !note) {
+            alert("Please fill in all fields.");
+            return;
+        }
         setNoteDetails([...noteDetails, { title, note, noteTag }]);
         cancelNewNote();
     };

@@ -25,7 +25,7 @@ const CreateByTags = ({setNoteTag}) => {
     return (
       <div
         key={index}
-        className={`py-1 px-2 border border-gray-400 rounded-lg font-semibold cursor-pointer hover:bg-gray-200 ${selectedTags.has(tag) ? 'bg-black text-white border-transparent hover:bg-gray-700 ' : ''} `}
+        className={`py-1 px-2 border border-gray-400 rounded-lg font-medium cursor-pointer hover:bg-gray-200 ${selectedTags.has(tag) ? 'bg-black text-white border-transparent hover:bg-gray-700 ' : ''} `}
         onClick={() => { handleTagClick(tag); setIsActive(!isActive); }}
       >
         {tag}
