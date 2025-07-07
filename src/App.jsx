@@ -17,9 +17,8 @@ function App() {
       <Header openCreate={setIsOpenCreateNote} />
       <Search />
       <Tags />
-      {isOpenCreateNote && <CreateNote openCreate={setIsOpenCreateNote} setNoteDetails={setNoteDetails} noteDetails={noteDetails}/>}     
-
-      <Notes noteDetails={noteDetails}/>
+      {isOpenCreateNote && <CreateNote openCreate={setIsOpenCreateNote} setNoteDetails={setNoteDetails} noteDetails={noteDetails} />}
+      <Notes noteDetails={noteDetails} />
     </main>
   )
 }
