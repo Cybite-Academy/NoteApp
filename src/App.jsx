@@ -13,7 +13,7 @@ function App() {
   const [noteDetails, setNoteDetails] = useState(noteObj);
   console.log(noteDetails)
   return (
-    <main className='w-[90%] mx-auto flex flex-col gap-8 pt-16'>
+    <main className='w-[90%] max-w-[600px] mx-auto flex flex-col gap-8 pt-12'>
       <Header openCreate={setIsOpenCreateNote} />
       <Search />
       <Tags />

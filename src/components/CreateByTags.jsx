@@ -18,7 +18,7 @@ const CreateByTags = ({setNoteTag}) => {
   }
 
   const filteredTags = tags.filter((tag) => {
-    return tag !== "all tags";
+    return tag !== "All tags";
   });
 
   return filteredTags.map((tag, index) => {
